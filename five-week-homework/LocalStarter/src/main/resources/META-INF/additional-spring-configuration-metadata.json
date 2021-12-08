@@ -1,0 +1,18 @@
+{
+  "properties": [
+    {
+      "sourceType": "com.example.localstarter.config.LocalProperties",
+      "defaultValue": "1",
+      "name": "local.properties.id",
+      "description": "id",
+      "type": "java.lang.Integer"
+    },
+    {
+      "sourceType": "com.example.localstarter.config.LocalProperties",
+      "defaultValue": "autoConfigStudent",
+      "name": "local.properties.name",
+      "description": "name",
+      "type": "java.lang.String"
+    }
+  ]
+}

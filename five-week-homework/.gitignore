@@ -36,3 +36,10 @@ build/
 /.mvn/wrapper/MavenWrapperDownloader.java
 /mvnw
 /mvnw.cmd
+/LocalStarter/mvnw.cmd
+/LocalStarter/mvnw
+/LocalStarter/.mvn/wrapper/MavenWrapperDownloader.java
+/LocalStarter/.mvn/wrapper/maven-wrapper.properties
+/LocalStarter/.mvn/wrapper/maven-wrapper.jar
+/LocalStarter/.mvn/wrapper/maven-wrapper.jar
+/LocalStarter/.mvn/wrapper/maven-wrapper.jar

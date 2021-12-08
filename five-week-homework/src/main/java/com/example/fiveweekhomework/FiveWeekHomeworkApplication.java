@@ -45,6 +45,7 @@ public class FiveWeekHomeworkApplication implements CommandLineRunner {
 
         System.out.println("查询结果：" + studentDao.selectByPrimaryKey(1L));
 
+        System.out.println("autoConfig:" +genericApplicationContext.getBean("autoConfigurationStudent"));
         studentJDBCService.insert(new Student(null, "李四"));
         studentJDBCService.update(new Student(3, "李四1"));
         //studentJDBCService.delete(2);
