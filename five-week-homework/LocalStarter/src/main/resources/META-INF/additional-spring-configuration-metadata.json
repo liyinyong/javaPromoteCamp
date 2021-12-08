@@ -3,14 +3,14 @@
     {
       "sourceType": "com.example.localstarter.config.LocalProperties",
       "defaultValue": "1",
-      "name": "local.properties.id",
+      "name": "local.id",
       "description": "id",
       "type": "java.lang.Integer"
     },
     {
       "sourceType": "com.example.localstarter.config.LocalProperties",
       "defaultValue": "autoConfigStudent",
-      "name": "local.properties.name",
+      "name": "local.name",
       "description": "name",
       "type": "java.lang.String"
     }

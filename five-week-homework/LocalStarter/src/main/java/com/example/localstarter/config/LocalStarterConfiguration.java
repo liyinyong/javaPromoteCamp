@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@EnableConfigurationProperties({LocalProperties.class})
+@EnableConfigurationProperties(LocalProperties.class)
 @ConditionalOnClass(LocalProperties.class)
 public class LocalStarterConfiguration {
 
