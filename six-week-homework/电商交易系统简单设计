@@ -1,0 +1,84 @@
+create table test.user_info
+(
+    id           bigint unsigned auto_increment
+        primary key,
+    user_name    varchar(20)                        not null comment '用户名',
+    phone        varchar(20)                        not null comment '手机号',
+    profile      varchar(50) comment '头像',
+    note         varchar(100) comment '说明',
+    gmt_create   datetime default CURRENT_TIMESTAMP not null,
+    gmt_modified datetime default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP
+)
+    ENGINE = InnoDB
+    comment '用户信息表'
+    charset = utf8mb4;
+
+
+create table test.user_address
+(
+    id           bigint unsigned auto_increment
+        primary key,
+    user_id      bigint comment '用户id',
+    phone        varchar(20) comment '手机号',
+    province     varchar(20) comment '省',
+    city         varchar(20) comment '市',
+    district     varchar(20) comment '区',
+    address      varchar(100) comment '详细地址',
+    gmt_create   datetime default CURRENT_TIMESTAMP not null,
+    gmt_modified datetime default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP
+)
+    ENGINE = InnoDB
+    comment '用户地址'
+    charset = utf8mb4;
+
+create table test.product
+(
+    id           bigint unsigned auto_increment
+        primary key,
+    name         varchar(20) comment '上面名称',
+    price        decimal(6, 2) comment '价格',
+    gmt_create   datetime default CURRENT_TIMESTAMP not null,
+    gmt_modified datetime default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP
+)
+    ENGINE = InnoDB
+    comment '商品表'
+    charset = utf8mb4;
+
+create table test.order_info
+(
+    id           bigint unsigned auto_increment
+        primary key,
+
+    user_id      bigint comment '用户id',
+    product_id   bigint comment '商品id',
+    price        decimal(6, 2) comment '价格',
+    pay_time     datetime comment '支付时间',
+    express_id   bigint comment '物流单号',
+    state        tinyint comment '订单状态',
+    gmt_create   datetime default CURRENT_TIMESTAMP not null,
+    gmt_modified datetime default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP
+)
+    ENGINE = InnoDB
+    comment '订单表'
+    charset = utf8mb4;
+
+create table test.express_info
+(
+    id              bigint unsigned auto_increment
+        primary key,
+
+    user_id         bigint comment '用户id',
+    order_id        bigint comment '订单id',
+    logistics_state tinyint comment '物流状态',
+    express_number  varchar(50) comment '物流单号',
+    phone           varchar(20) comment '手机号',
+    province        varchar(20) comment '省',
+    city            varchar(20) comment '市',
+    district        varchar(20) comment '区',
+    address         varchar(100) comment '详细地址',
+    gmt_create      datetime default CURRENT_TIMESTAMP not null,
+    gmt_modified    datetime default CURRENT_TIMESTAMP not null on update CURRENT_TIMESTAMP
+)
+    ENGINE = InnoDB
+    comment '物流信息表'
+    charset = utf8mb4;
