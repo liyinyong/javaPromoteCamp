@@ -2,14 +2,17 @@ package com.example.seventhweekhomework.model;
 
 import java.io.Serializable;
 import java.util.Date;
+
 import lombok.Data;
 
 /**
  * user_info
- * @author 
+ *
+ * @author
  */
 @Data
 public class UserInfo implements Serializable {
+
     private Long id;
 
     /**
