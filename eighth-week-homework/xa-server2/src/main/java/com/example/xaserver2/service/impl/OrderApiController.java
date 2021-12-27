@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class OrderApiController implements OrderApi {
     @Override
     @GetMapping("/create")
-    @HmilyTCC(confirmMethod = "", cancelMethod = "")
+    @HmilyTCC(confirmMethod = "confirmCreateOrder", cancelMethod = "cancelCreateOrder")
     public String createOrder(int userId, int productId) {
         log.info("冻结库存");
         return "success";
