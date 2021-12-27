@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import javax.annotation.Resource;
 
 @SpringBootApplication
-public class XaServer1Application implements CommandLineRunner {
+public class TCCServer1Application implements CommandLineRunner {
 
     public static void main(String[] args) {
         SpringApplication.run(XaServer1Application.class, args);

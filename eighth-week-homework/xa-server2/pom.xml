@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>xa-server2</artifactId>
+    <artifactId>tcc-server2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>xa-server2</name>
-    <description>xa-server2</description>
+    <name>tcc-server2</name>
+    <description>tcc-server2</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>

@@ -51,3 +51,9 @@ build/
 /xa-server2/mvnw
 /xa-server1/mvnw.cmd
 /xa-server2/mvnw.cmd
+/tcc-server1/.mvn/wrapper/maven-wrapper.jar
+/xa-server2/.mvn/wrapper/maven-wrapper.jar
+/tcc-server1/.mvn/wrapper/maven-wrapper.properties
+/tcc-server1/.mvn/wrapper/MavenWrapperDownloader.java
+/tcc-server1/mvnw
+/tcc-server1/mvnw.cmd
