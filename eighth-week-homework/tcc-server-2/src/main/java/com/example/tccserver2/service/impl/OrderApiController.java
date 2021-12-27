@@ -1,6 +1,6 @@
 package com.example.tccserver2.service.impl;
 
-import com.example.tccserver2.service.OrderApi;
+import com.example.tccserver2api.api.OrderApi;
 import lombok.extern.slf4j.Slf4j;
 import org.dromara.hmily.annotation.HmilyTCC;
 import org.springframework.web.bind.annotation.GetMapping;
