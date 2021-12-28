@@ -1,10 +1,10 @@
-package com.example.tccserver1;
+package com.example.xaserver1;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TccServer1ApplicationTests {
+class XaServer1ApplicationTests {
 
     @Test
     void contextLoads() {

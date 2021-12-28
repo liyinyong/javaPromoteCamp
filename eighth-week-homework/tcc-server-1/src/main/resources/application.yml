@@ -1,0 +1,40 @@
+server:
+  port: 8081
+  address: 0.0.0.0
+  servlet:
+    context-path: /
+
+mybatis:
+  mapper-locations:
+    classpath: mapper/*.xml
+spring:
+    main:
+        allow-bean-definition-overriding: true
+    datasource:
+        driver-class-name:  com.mysql.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/test_1?useUnicode=true&characterEncoding=utf8
+        username: root
+        password: 123456
+    application:
+      name: tcc-server-1
+
+#${random.int[9000,9999]}
+eureka:
+ client:
+     serviceUrl:
+       defaultZone: http://localhost:8761/eureka/
+ instance:
+   prefer-ip-address: true
+
+#Ribbon的负载均衡策略
+ribbon:
+    NFLoadBalancerRuleClassName:  com.netflix.loadbalancer.RandomRule
+    MaxAutoRetriesNextServer : 0
+    MaxAutoRetries: 0
+    ReadTimeout: 10000
+feign:
+  hystrix:
+     enabled : false
+    # 在feign中开启hystrix功能，默认情况下feign不开启hystrix功能
+
+

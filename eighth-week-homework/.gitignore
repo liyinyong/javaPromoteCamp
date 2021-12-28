@@ -82,3 +82,12 @@ build/
 /tcc-server-2/tcc-server-2-api/.mvn/wrapper/MavenWrapperDownloader.java
 /tcc-server-2/tcc-server-2-api/mvnw
 /tcc-server-2/tcc-server-2-api/mvnw.cmd
+/eureka/.mvn/wrapper/maven-wrapper.jar
+/tcc-server-1/.mvn/wrapper/maven-wrapper.jar
+/tcc-server-2/.mvn/wrapper/maven-wrapper.jar
+/tcc-server-2/tcc-server-2-api/.mvn/wrapper/maven-wrapper.jar
+/xa-test/xa-server-1/.mvn/wrapper/maven-wrapper.jar
+/xa-test/xa-server-1/.mvn/wrapper/maven-wrapper.properties
+/xa-test/xa-server-1/.mvn/wrapper/MavenWrapperDownloader.java
+/xa-test/xa-server-1/mvnw
+/xa-test/xa-server-1/mvnw.cmd
