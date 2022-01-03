@@ -1,10 +1,17 @@
 package io.kimmking.rpcfx.api;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
-public class RpcfxRequest {
-  private String serviceClass;
+@NoArgsConstructor
+public class RpcfxRequest<T> {
+  private Class<T> serviceClass;
   private String method;
   private Object[] params;
+
+  public RpcfxRequest (Class<T> tClass) {
+      this.serviceClass = tClass;
+  }
 }
+

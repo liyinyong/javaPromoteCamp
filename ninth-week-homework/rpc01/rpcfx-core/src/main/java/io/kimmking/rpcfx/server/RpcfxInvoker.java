@@ -20,10 +20,8 @@ public class RpcfxInvoker {
 
     public RpcfxResponse invoke(RpcfxRequest request) {
         RpcfxResponse response = new RpcfxResponse();
-        String serviceClass = request.getServiceClass();
-
         // 作业1：改成泛型和反射
-        Object service = resolver.resolve(serviceClass);//this.applicationContext.getBean(serviceClass);
+        Object service = resolver.resolve(request.getServiceClass());//this.applicationContext.getBean(serviceClass);
 
         try {
             Method method = resolveMethodFromClass(service.getClass(), request.getMethod());

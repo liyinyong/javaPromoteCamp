@@ -70,8 +70,7 @@ public final class Rpcfx {
             // 加filter地方之二
             // mock == true, new Student("hubao");
 
-            RpcfxRequest request = new RpcfxRequest();
-            request.setServiceClass(this.serviceClass.getName());
+            RpcfxRequest request = new RpcfxRequest(this.serviceClass);
             request.setMethod(method.getName());
             request.setParams(params);
 
@@ -91,7 +90,7 @@ public final class Rpcfx {
             // 这里判断response.status，处理异常
             // 考虑封装一个全局的RpcfxException
 
-            return JSON.parse(response.getResult().toString());
+            return JSON.parseObject(response.getResult().toString(), method.getReturnType());
         }
 
         private RpcfxResponse post(RpcfxRequest req, String url) throws IOException {
