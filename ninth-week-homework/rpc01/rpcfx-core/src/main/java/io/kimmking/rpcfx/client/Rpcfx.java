@@ -105,9 +105,9 @@ public final class Rpcfx {
                     .post(RequestBody.create(JSONTYPE, reqJson))
                     .build();
             //netty,异步的
-            NettyClient.connectServer("localhost", 8080, url, reqJson);
+            String result = NettyClient.connectServer("127.0.0.1", 8080, url, reqJson);
             String respJson = client.newCall(request).execute().body().string();
-            System.out.println("resp json: "+respJson);
+            System.out.println("resp json: "+result);
             return JSON.parseObject(respJson, RpcfxResponse.class);
         }
     }

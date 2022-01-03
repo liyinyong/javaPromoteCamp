@@ -5,11 +5,13 @@ import com.alibaba.fastjson.serializer.SerializerFeature;
 import io.kimmking.rpcfx.api.RpcfxRequest;
 import io.kimmking.rpcfx.api.RpcfxResolver;
 import io.kimmking.rpcfx.api.RpcfxResponse;
+import lombok.extern.slf4j.Slf4j;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 
+@Slf4j
 public class RpcfxInvoker {
 
     private RpcfxResolver resolver;
@@ -22,7 +24,7 @@ public class RpcfxInvoker {
         RpcfxResponse response = new RpcfxResponse();
         // 作业1：改成泛型和反射
         Object service = resolver.resolve(request.getServiceClass());//this.applicationContext.getBean(serviceClass);
-
+        log.info("请求{}", request);
         try {
             Method method = resolveMethodFromClass(service.getClass(), request.getMethod());
             Object result = method.invoke(service, request.getParams()); // dubbo, fastjson,
