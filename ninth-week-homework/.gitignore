@@ -36,3 +36,8 @@ build/
 /.mvn/wrapper/MavenWrapperDownloader.java
 /mvnw
 /mvnw.cmd
+/dubbo-hmily-tcc/tcc-server-2/tcc-server-2-api/.mvn/wrapper/maven-wrapper.jar
+/dubbo-hmily-tcc/tcc-server-2/tcc-server-2-api/.mvn/wrapper/maven-wrapper.properties
+/dubbo-hmily-tcc/tcc-server-2/tcc-server-2-api/.mvn/wrapper/MavenWrapperDownloader.java
+/dubbo-hmily-tcc/tcc-server-2/tcc-server-2-api/mvnw
+/dubbo-hmily-tcc/tcc-server-2/tcc-server-2-api/mvnw.cmd
