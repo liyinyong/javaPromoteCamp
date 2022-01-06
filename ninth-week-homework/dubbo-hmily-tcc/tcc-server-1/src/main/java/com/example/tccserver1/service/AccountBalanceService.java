@@ -1,12 +1,12 @@
 package com.example.tccserver1.service;
 
-import com.alibaba.dubbo.config.annotation.Service;
 import com.example.tccserver1.mapper.AccountBalanceDao;
 import com.example.tccserver1.mapper.AccountBalanceFreezeDao;
 import com.example.tccserver1.model.AccountBalance;
 import com.example.tccserver1.model.AccountBalanceFreeze;
 import com.example.tccserver2api.dto.ExchangeDTO;
 import org.dromara.hmily.annotation.HmilyTCC;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;

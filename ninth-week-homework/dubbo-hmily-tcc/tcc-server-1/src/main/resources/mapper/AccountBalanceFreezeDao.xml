@@ -4,8 +4,8 @@
   <resultMap id="BaseResultMap" type="com.example.tccserver1.model.AccountBalanceFreeze">
     <id column="id" jdbcType="BIGINT" property="id" />
     <result column="user_id" jdbcType="BIGINT" property="userId" />
-    <result column="currency" jdbcType="TINYINT" property="currency" />
-    <result column="balance" jdbcType="DECIMAL" property="balance" />
+    <result column="order_id" jdbcType="BIGINT" property="orderId" />
+    <result column="account_balance_id" jdbcType="BIGINT" property="accountBalanceId" />
     <result column="freeze_number" jdbcType="DECIMAL" property="freezeNumber" />
     <result column="gmt_create" jdbcType="TIMESTAMP" property="gmtCreate" />
     <result column="gmt_modified" jdbcType="TIMESTAMP" property="gmtModified" />
@@ -101,7 +101,7 @@
     </set>
     where id = #{id,jdbcType=BIGINT}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.example.tccserver2.model.AccountBalanceFreeze">
+  <update id="updateByPrimaryKey" parameterType="com.example.tccserver1.model.AccountBalanceFreeze">
     update account_balance_freeze
     set user_id = #{userId,jdbcType=BIGINT},
         currency = #{currency,jdbcType=TINYINT},
