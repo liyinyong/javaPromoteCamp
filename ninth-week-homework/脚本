@@ -27,3 +27,11 @@ create table test_1.account_balance_freeze
     comment '用户冻结信息表' charset = utf8mb4;
 create index idx_account_balance_freeze_user_id_order_id
     on test_1.account_balance_freeze (user_id, order_id);
+
+这里是两个实例的两个相同的库
+3306：
+insert into test_1.account_balance (user_id, currency, balance, freeze_number) VALUES (1,1,100,0);
+insert into test_1.account_balance (user_id, currency, balance, freeze_number) VALUES (1,2,0,0);
+3307：
+insert into test_1.account_balance (user_id, currency, balance, freeze_number) VALUES (2,1,100,0);
+insert into test_1.account_balance (user_id, currency, balance, freeze_number) VALUES (2,2,0,0);
