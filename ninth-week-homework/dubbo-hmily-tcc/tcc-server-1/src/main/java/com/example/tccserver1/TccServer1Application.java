@@ -9,10 +9,10 @@ import org.springframework.context.annotation.ComponentScan;
 
 import javax.annotation.Resource;
 
+@EnableDubbo(scanBasePackages ="com.example")
 @SpringBootApplication
 @ComponentScan(basePackages = "com.example")
 @MapperScan(basePackages = "com.example.tccserver1.mapper")
-@EnableDubbo(scanBasePackages ="com.example")
 public class TccServer1Application implements CommandLineRunner {
 
     public static void main(String[] args) {

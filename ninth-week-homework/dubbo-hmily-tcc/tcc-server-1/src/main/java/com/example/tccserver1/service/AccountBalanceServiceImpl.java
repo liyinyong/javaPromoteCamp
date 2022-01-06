@@ -1,28 +1,26 @@
-package com.example.tccserver2.service;
+package com.example.tccserver1.service;
 
-import com.alibaba.dubbo.config.annotation.Service;
-import com.example.tccserver2.mapper.AccountBalanceDao;
-import com.example.tccserver2.mapper.AccountBalanceFreezeDao;
-import com.example.tccserver2.model.AccountBalance;
-import com.example.tccserver2.model.AccountBalanceFreeze;
-import com.example.tccserver2api.api.AccountBalanceApi;
+import com.example.tccserver1.mapper.AccountBalanceDao;
+import com.example.tccserver1.mapper.AccountBalanceFreezeDao;
+import com.example.tccserver1.model.AccountBalance;
+import com.example.tccserver1.model.AccountBalanceFreeze;
 import com.example.tccserver2api.dto.ExchangeDTO;
 import org.dromara.hmily.annotation.HmilyTCC;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
-import java.math.BigDecimal;
 
-@Service(version = "1.0.0")
-public class AccountBalanceService implements AccountBalanceApi {
+@Service
+public class AccountBalanceServiceImpl implements AccountBalanceService{
     @Resource
     private AccountBalanceFreezeDao accountBalanceFreezeDao;
     @Resource
     private AccountBalanceDao accountBalanceDao;
 
-    @Override
     @HmilyTCC(confirmMethod = "confirmExchangeAccountBalance", cancelMethod = "cancelExchangeAccountBalance")
     @Transactional
+    @Override
     public void exchangeAccountBalance(ExchangeDTO exchangeDTO) {
         //增加人民币冻结金额
         AccountBalance accountBalance = accountBalanceDao.getByUserIdAndCurrency(exchangeDTO.getUserId(), (byte) 1);
