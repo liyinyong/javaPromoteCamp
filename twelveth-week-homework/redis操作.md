@@ -19,3 +19,8 @@ redis.windows-service-6381.conf
 6379：sentinel.conf
 6380：sentinel-6380.conf
 6381：sentinel-6381.conf
+4：cluster配置：
+redis-cli -p 7001 cluster meet 127.0.0.1 7002
+redis-cli -p 7001 cluster meet 127.0.0.1 7003
+创建集群：
+redis-trib.rb create 127.0.0.1:7001 127.0.0.1:7002 127.0.0.1:7003
