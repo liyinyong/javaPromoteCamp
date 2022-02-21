@@ -1,17 +1,8 @@
 JVM:
     JVM，全称就是java-virtual-machine，java虚拟机，专门运行java程序的容器，支持跨平台。
-    JVM自己管理内存释放，不需要手动释放，支持多种垃圾回收算法，不同版本支持不同的垃圾收集器，主要有serial收集器，ParNew收集器，Parallel Scavenge收集器，Serial Old收集器，Parallel Old收集器，CMS收集器，G1收集器，ZGC。
-    JVM可以通过配置各种参数设置jvm属性，常用
-        ：-Xmx，
-        ：-Xms
-        ：-Xmn
-        ：-Xss
-    以及各种GC收集器的使用参数：
-        ：-XX:+UseG1GC
-        ：-XX:+UseConcMarkSweepGC
-        ：-XX:+UseSerialGC
-        ：-XX:+UseParallelGC
-        ：-XX:+UseZGC
-    支持使用一些命令查看JVM，
-        ：jstack
-        ：jmap
+    JVM自己管理内存释放，不需要手动释放，支持多种垃圾回收算法，不同版本支持不同的垃圾收集器。
+    JVM可以通过配置各种参数设置jvm属性。
+    JVm支持使用一些工具或者命令查看JVM情况。
+NIO:
+    NIO，即Non-Blocking-IO(非阻塞IO)，java里面也称为新IO，区别于BIO（Blocking-IO，阻塞IO）。
+    核心区别在于IO模型上，由此延伸出IO的模型分类：阻塞IO模型，非阻塞IO模型，多路复用IO模型，信号驱动IO模型，异步IO模型
