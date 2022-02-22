@@ -5,4 +5,5 @@ JVM:
     JVm支持使用一些工具或者命令查看JVM情况。
 NIO:
     NIO，即Non-Blocking-IO(非阻塞IO)，java里面也称为新IO，区别于BIO（Blocking-IO，阻塞IO）。
-    核心区别在于IO模型上，由此延伸出IO的模型分类：阻塞IO模型，非阻塞IO模型，多路复用IO模型，信号驱动IO模型，异步IO模型
+    核心区别在于IO模型上，由此延伸出IO的模型分类：阻塞IO模型，非阻塞IO模型，多路复用IO模型，信号驱动IO模型，异步IO模型。
+    市面上使用最多的通信框架是netty。
